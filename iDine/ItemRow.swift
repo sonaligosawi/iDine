@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct ItemRow: View {
+    var item : MenuItem
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Image(item.thumbnailImage)
+                .clipShape(.circle)
+                .overlay(Circle().stroke(.gray, lineWidth: 2))
+            VStack(alignment: .leading){
+                Text(item.name)
+                    .font(.headline)
+                Text("$\(item.price)")
+            }
+            
+        }
+        
     }
 }
 
 #Preview {
-    ItemRow()
+    ItemRow(item: MenuItem.example)
 }

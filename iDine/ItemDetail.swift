@@ -7,12 +7,35 @@
 
 import SwiftUI
 
-struct Itemdetail: View {
+struct ItemDetail: View {
+    let item : MenuItem
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ZStack(alignment: .bottomTrailing){
+                Image(item.mainImage)
+                    .resizable()
+                    .scaledToFit()
+                    
+                Text("Photo:\(item.photoCredit)")
+                    .padding(4)
+                    .background(.black)
+                    .font(.caption)
+                    .foregroundStyle(.white)
+                    .offset(x: -5, y: -5)
+            }
+            
+            Text(item.description)
+                .padding()
+            Spacer()
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(item.name)
     }
 }
 
 #Preview {
-    Itemdetail()
+    NavigationStack{
+        ItemDetail(item: MenuItem.example)
+
+    }
 }

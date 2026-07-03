@@ -9,22 +9,23 @@
 /* Begin PBXBuildFile section */
 		F869F8542FF3CB1C0053ACAB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869F8532FF3CB1C0053ACAB /* Helper.swift */; };
 		F869F8562FF3CB230053ACAB /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = F869F8552FF3CB230053ACAB /* menu.json */; };
-		F869F8582FF3CB2A0053ACAB /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869F8572FF3CB2A0053ACAB /* Menu.swift */; };
-		F869F85A2FF3CB300053ACAB /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869F8592FF3CB300053ACAB /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F869F8452FF3CA330053ACAB /* iDine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F869F8532FF3CB1C0053ACAB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		F869F8552FF3CB230053ACAB /* menu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
-		F869F8572FF3CB2A0053ACAB /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		F869F8592FF3CB300053ACAB /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F869F8472FF3CA330053ACAB /* iDine */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = iDine;
+			sourceTree = "<group>";
+		};
+		F8B24E992FF800200053C41C /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -43,10 +44,9 @@
 		F869F83C2FF3CA330053ACAB = {
 			isa = PBXGroup;
 			children = (
-				F869F8592FF3CB300053ACAB /* Order.swift */,
+				F8B24E992FF800200053C41C /* Model */,
 				F869F8532FF3CB1C0053ACAB /* Helper.swift */,
 				F869F8552FF3CB230053ACAB /* menu.json */,
-				F869F8572FF3CB2A0053ACAB /* Menu.swift */,
 				F869F8472FF3CA330053ACAB /* iDine */,
 				F869F8462FF3CA330053ACAB /* Products */,
 			);
@@ -77,6 +77,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				F869F8472FF3CA330053ACAB /* iDine */,
+				F8B24E992FF800200053C41C /* Model */,
 			);
 			name = iDine;
 			packageProductDependencies = (
@@ -135,8 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F869F85A2FF3CB300053ACAB /* Order.swift in Sources */,
-				F869F8582FF3CB2A0053ACAB /* Menu.swift in Sources */,
 				F869F8542FF3CB1C0053ACAB /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

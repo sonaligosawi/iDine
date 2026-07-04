@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct CheckoutView: View {
+    @EnvironmentObject var order : Order
+    var paymenyTypes = ["Cash","Credit card","iDine points"]
+    @State private var paymentType = "Cash"
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Section(){
+                Picker("Payment Type", selection: $paymentType){
+                    ForEach(paymenyTypes, id: \.self){
+                        Text($0)
+                    }
+                }
+            }
+        }
     }
 }
 
 #Preview {
     CheckoutView()
+        .environmentObject(Order())
 }

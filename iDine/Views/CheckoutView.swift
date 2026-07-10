@@ -22,6 +22,7 @@ struct CheckoutView: View {
         let tip = total * Double(tipAmount) / 100
         return (total + tip).formatted(.currency(code: "USD"))
     }
+    @State private var showingPaymentAlert = false
     
     var body: some View {
         Form{
@@ -48,12 +49,17 @@ struct CheckoutView: View {
             }
             Section("Total: \(totalPrice)"){
                 Button("Proceed to payment"){
-                    
+                    showingPaymentAlert.toggle()
                 }
             }
         }
         .navigationTitle("Payment")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Order Confirmed", isPresented: $showingPaymentAlert) {
+            
+        }message:{
+            Text("Your total was \(totalPrice)- thank you!")
+        }
     }
 }
 

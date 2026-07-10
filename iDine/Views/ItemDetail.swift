@@ -10,6 +10,8 @@ import SwiftUI
 struct ItemDetail: View {
     let item : MenuItem
     @EnvironmentObject var order : Order
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack{
             ZStack(alignment: .bottomTrailing){
@@ -29,7 +31,7 @@ struct ItemDetail: View {
                 .padding()
             Button("Order This") {
                 order.add(item: item)
-                    
+                dismiss()
             }
             .buttonStyle(.borderedProminent)
             Spacer()
